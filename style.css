@@ -89,13 +89,20 @@ nav {
 /* ----------------------------    Main   ----------------------- */
 main {
     position: relative;
-    min-height: 80lvh;
+    min-height: 90svh;
+    height: 100%;
     width: 100%;
     padding: 0 12px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 18px;
+    grid-row-gap: 18px;
 }
 
+
 .first {
-    gap:10px;
+    gap: 10px;
     width: 100%;
     display: flex;
     /* background: #dacd19; */
@@ -125,12 +132,13 @@ main {
     padding-right: 2rem;
 }
 
-.left-footer a{
+.left-footer a {
     padding: 0.5rem 1.5rem;
     background-color: #000000;
     border-radius: 50px;
     color: #fff;
 }
+
 .first-right {
     flex: 1.5;
     background-color: #fff;
@@ -158,40 +166,44 @@ main {
 }
 
 .first-second {
-    flex: 2;
+    
     background-color: #d67f45;
     border-radius: 20px;
     padding: 25px 40px;
-    display: flex;
     gap: 24px;
+    display: flex;
 }
-.right{
+
+.right {
     width: 100%;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
 
 }
-.right .bottom h3{
+
+.right .bottom h3 {
     font-weight: 800;
 
 }
-.right-top{
+
+.right-top {
     width: 100%;
     display: flex;
+    gap: 10px;
     justify-content: space-between;
 
 }
 
-.first-second .picture img {
-    width: 180px;
-    height:150px;
+.picture img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 20px;
 
 }
 
-.second-right{
+.second-right {
     flex: 1.5;
     background-color: #fff;
     border-radius: 20px;
@@ -201,58 +213,75 @@ main {
     gap: 10px;
 
 }
-.right-top{
+
+.right-top {
     display: flex;
     justify-content: space-between;
 
 }
-.start{
+
+.start {
     font-size: 11px;
     display: flex;
     flex-direction: column;
-    
+
 }
-.num-start{
+
+.num-start {
     display: flex;
     align-items: center;
     gap: 10px;
 
 }
-.num-start h3{
+
+.num-start h3 {
     font-size: 2.5rem;
-    font-weight:700 ;
+    font-weight: 700;
 }
-.circle-pic img{
+
+.circle-pic img {
     clip-path: circle();
     object-fit: cover;
     width: 80px;
 }
-.right-bottom{
+
+.right-bottom {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
 }
-.right-bottom a{
+
+.right-bottom a {
     color: #000;
     font-weight: 500;
     padding: 0.4rem;
     border-radius: 100vmax;
     border: 1px solid #302e2e8e;
 }
+
 /* responsive */
 
 @media screen and (max-width : 900px) {
+    main{
+        padding: 8rem 1rem 8rem 1rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 14px;
+        grid-row-gap: 14px;
+    }
     .first {
 
         margin-top: 8.5rem;
     }
 
-    
-    .second{
+
+    .second {
         margin: 24px 0;
 
     }
-    .first,.second {
+
+    .first,
+    .second {
         gap: 24px;
         flex-direction: column;
     }
@@ -269,7 +298,7 @@ main {
         top: 0;
         z-index: 9999;
     }
-    
+
     .btn-nav {
         display: none;
     }
@@ -284,12 +313,16 @@ main {
     }
 
     .first-left,
-    .first-right,.second-right,.first-second {
+    .first-right,
+    .second-right,
+    .first-second {
         padding: 25px 20px;
     }
-    .first-second .picture img{
+
+    .first-second .picture img {
         width: 100%;
     }
+
     .menu {
         margin-left: 0;
         display: flex;
@@ -301,20 +334,25 @@ main {
         margin-left: 0;
         color: #fff;
     }
-    .right-top{
+
+    .right-top {
         flex-direction: column;
         justify-content: space-around;
 
     }
-    .right{
+
+    .right {
         width: auto;
         align-items: center;
         justify-content: space-around;
     }
-    .first-second{
+
+    .first-second {
         justify-content: space-between;
     }
-    .num-start,.circle-pic{
+
+    .num-start,
+    .circle-pic {
         flex: 1;
     }
 }
